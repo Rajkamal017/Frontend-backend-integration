@@ -5,7 +5,8 @@ function App() {
   const [notes, setNotes] = useState([]);
 
   function fetchNotes() {
-    axios.get("http://localhost:3000/api/notes").then((res) => {
+    axios.get("http://localhost:3000/api/notes")
+    .then((res) => {
       setNotes(res.data.notes);
     });
   }
